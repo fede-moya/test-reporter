@@ -15,7 +15,7 @@ fi
 ./release-scripts/validate-release
 
 version="$1"
-old_version=$(< version/VERSION)
+old_version=$(< VERSIONING/VERSION)
 branch="release-$version"
 
 
