@@ -117,7 +117,7 @@ workflows:
           filters:
             branches:
               only: /^v\d+\.\d+\.\d+$/
-      - gh_release:
+      - github_release:
           requires:
             - release_linux
           filters:
