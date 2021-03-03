@@ -25,7 +25,7 @@ git reset --hard origin/master
 
 git checkout -b "$branch"
 
-printf "%s\n" "$version" > version/VERSION
+printf "%s\n" "$version" > VERSIONING/VERSION
 git add version/VERSION
 git commit --message "Release v$version"
 git push origin "$branch"
