@@ -80,7 +80,7 @@ jobs:
             make publish-latest
             make publish-version
 
-  github-release:
+  github_release:
     <<: *linux_image
     steps:
       - run: sudo apt install hub
