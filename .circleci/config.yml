@@ -111,6 +111,7 @@ workflows:
       #      branches:
       #        only:
       #          - master
+      - release_head_linux
 notify:
   webhooks:
     - url: https://cc-slack-proxy.herokuapp.com/circle
