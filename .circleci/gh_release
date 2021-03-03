@@ -1,8 +1,9 @@
 #!/bin/sh
 
+set -e
 set -o nounset
 set -o errexit
-set -o pipefail
+#set -o pipefail
 
 #ARCHS="linux-amd64 netcgo-linux-amd64 darwin-amd64"
 VERSION=`cat VERSIONING/VERSION`
