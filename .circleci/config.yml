@@ -111,7 +111,19 @@ workflows:
       #      branches:
       #        only:
       #          - master
-      - release_head_linux
+      - release_linux:
+          requires:
+            - test_linux
+          filters:
+            branches:
+              only: /^v\d+\.\d+\.\d+$/
+      - gh_release:
+          requires:
+            - release_linux
+          filters:
+            branches:
+              only: /^v\d+\.\d+\.\d+$/
+
 notify:
   webhooks:
     - url: https://cc-slack-proxy.herokuapp.com/circle
